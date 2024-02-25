@@ -1,25 +1,36 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:movie_app/l10n/cubit/locale_cubit.dart';
+import 'package:movie_app/l10n/locale_controller.dart';
 
 String language = 'vi';
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => LocaleCubit(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    final LocaleCubit localeCubit = context.watch<LocaleCubit>();
+    return MaterialApp(
       title: 'Flutter Demo',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale(language),
+      locale: Locale(localeCubit.state.languageCode.isEmpty
+          ? 'en'
+          : localeCubit.state.languageCode),
       theme: ThemeData(
         useMaterial3: true,
       ),
@@ -38,6 +49,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    final LocaleCubit localeCubit = context.read<LocaleCubit>();
     Brightness currentBrightness = Theme.of(context).brightness;
     final theme = Theme.of(context);
     return Scaffold(
@@ -53,15 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
             ),
             ElevatedButton(
-              onPressed: () {
-                if (currentBrightness == Brightness.light) {
-                  Get.changeTheme(ThemeData.dark());
-                  print('Đang sử dụng chủ đề sáng');
-                } else {
-                  Get.changeTheme(ThemeData.light());
-                  print('Đang sử dụng chủ đề tối');
-                }
-              },
+              onPressed: () {},
               child: Text(
                 AppLocalizations.of(context)!.changeTheme,
                 style: TextStyle(color: theme.colorScheme.onSurface),
@@ -72,13 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  setState(() {
-                    language = 'vi';
-                    print(language);
-                  });
-                  Get.to(MyHomePage());
+                  localeCubit.setLanguageCode();
                 },
-                child: Text(AppLocalizations.of(context)!.changeLanguage))
+                child: Text(AppLocalizations.of(context)!.changeLanguage)),
           ],
         ),
       ),
