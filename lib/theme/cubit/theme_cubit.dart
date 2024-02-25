@@ -1,8 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-
-part 'theme_state.dart';
+import 'package:movie_app/theme/cubit/theme_state.dart';
 
 class ThemeCubit extends Cubit<ThemeState> {
-  ThemeCubit() : super(ThemeInitial());
+  ThemeCubit() : super(const ThemeState());
+  void toggedTheme() {
+    emit(state.copyWith(status: ThemeStatus.init));
+    emit(state.copyWith(isLight: !state.isLight, status: ThemeStatus.success));
+  }
 }
