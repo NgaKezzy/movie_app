@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Change language"),
         "changeTheme": MessageLookupByLibrary.simpleMessage("Change theme"),
         "helloWorld": MessageLookupByLibrary.simpleMessage("Hello world!"),
-        "homePage": MessageLookupByLibrary.simpleMessage("Home page")
+        "homePage": MessageLookupByLibrary.simpleMessage("Home page"),
+        "ok": MessageLookupByLibrary.simpleMessage("Ok")
       };
 }

@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeTheme": MessageLookupByLibrary.simpleMessage("Thay đổi chủ đề"),
         "helloWorld":
             MessageLookupByLibrary.simpleMessage("Xin chào thế giới!"),
-        "homePage": MessageLookupByLibrary.simpleMessage("Trang chủ")
+        "homePage": MessageLookupByLibrary.simpleMessage("Trang chủ"),
+        "ok": MessageLookupByLibrary.simpleMessage("Đồng ý")
       };
 }

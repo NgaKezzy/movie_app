@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:movie_app/l10n/cubit/locale_cubit.dart';
+import 'package:movie_app/router/router_config.dart';
 import 'package:movie_app/theme/cubit/theme_cubit.dart';
 import 'package:movie_app/theme/dark_theme.dart';
 import 'package:movie_app/theme/light_theme.dart';
 
 String language = 'vi';
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MultiBlocProvider(
       providers: [
@@ -23,75 +25,36 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late LocaleCubit localeCubit;
+  @override
+  void initState() {
+    localeCubit = context.read<LocaleCubit>();
+    localeCubit.initLanguage();
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     final LocaleCubit localeCubit = context.watch<LocaleCubit>();
     final ThemeCubit themeCubit = context.watch<ThemeCubit>();
 
-    return MaterialApp(
+    return MaterialApp.router(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(localeCubit.state.languageCode.isEmpty
           ? 'en'
           : localeCubit.state.languageCode),
       theme: themeCubit.state.isLight ? light : dark,
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    final LocaleCubit localeCubit = context.read<LocaleCubit>();
-    final ThemeCubit themeCubit = context.read<ThemeCubit>();
-
-    Brightness currentBrightness = Theme.of(context).brightness;
-    final theme = Theme.of(context);
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              AppLocalizations.of(context)!.helloWorld,
-              style: TextStyle(
-                  color: theme.colorScheme.onSurface,
-                  fontWeight: FontWeight.w600),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                themeCubit.toggedTheme();
-              },
-              child: Text(
-                AppLocalizations.of(context)!.changeTheme,
-                style: TextStyle(color: theme.colorScheme.tertiary),
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  localeCubit.setLanguageCode();
-                },
-                child: Text(AppLocalizations.of(context)!.changeLanguage)),
-          ],
-        ),
-      ),
+      routerConfig: routerConfig,
     );
   }
 }

@@ -11,6 +11,10 @@ abstract class _$LocaleStateCWProxy {
 
   LocaleState languageCode(String languageCode);
 
+  LocaleState countryNames(List<String> countryNames);
+
+  LocaleState isSelectLanguage(bool isSelectLanguage);
+
   LocaleState status(LocaleStatus status);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LocaleState(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
@@ -22,6 +26,8 @@ abstract class _$LocaleStateCWProxy {
   LocaleState call({
     List<String>? languageCodes,
     String? languageCode,
+    List<String>? countryNames,
+    bool? isSelectLanguage,
     LocaleStatus? status,
   });
 }
@@ -41,6 +47,14 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
       this(languageCode: languageCode);
 
   @override
+  LocaleState countryNames(List<String> countryNames) =>
+      this(countryNames: countryNames);
+
+  @override
+  LocaleState isSelectLanguage(bool isSelectLanguage) =>
+      this(isSelectLanguage: isSelectLanguage);
+
+  @override
   LocaleState status(LocaleStatus status) => this(status: status);
 
   @override
@@ -54,6 +68,8 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
   LocaleState call({
     Object? languageCodes = const $CopyWithPlaceholder(),
     Object? languageCode = const $CopyWithPlaceholder(),
+    Object? countryNames = const $CopyWithPlaceholder(),
+    Object? isSelectLanguage = const $CopyWithPlaceholder(),
     Object? status = const $CopyWithPlaceholder(),
   }) {
     return LocaleState(
@@ -67,6 +83,16 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
               ? _value.languageCode
               // ignore: cast_nullable_to_non_nullable
               : languageCode as String,
+      countryNames:
+          countryNames == const $CopyWithPlaceholder() || countryNames == null
+              ? _value.countryNames
+              // ignore: cast_nullable_to_non_nullable
+              : countryNames as List<String>,
+      isSelectLanguage: isSelectLanguage == const $CopyWithPlaceholder() ||
+              isSelectLanguage == null
+          ? _value.isSelectLanguage
+          // ignore: cast_nullable_to_non_nullable
+          : isSelectLanguage as bool,
       status: status == const $CopyWithPlaceholder() || status == null
           ? _value.status
           // ignore: cast_nullable_to_non_nullable

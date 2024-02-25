@@ -22,7 +22,7 @@ ThemeData dark = ThemeData(
       onTertiary: Color(0xFF492532),
       tertiaryContainer: Color(0xFF633B48),
       onTertiaryContainer: Color(0xFFFFD8E4),
-      error: Color(0xFFF2B8B5),
+      error: Color(0xFFFF0000),
       onError: Color(0xFF601410),
       errorContainer: Color(0xFF8C1D18),
       onErrorContainer: Color(0xFFF9DEDC),

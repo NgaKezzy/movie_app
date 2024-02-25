@@ -2,5 +2,6 @@
     "helloWorld": "Xin chào thế giới!",
     "homePage": "Trang chủ",
     "changeLanguage":"Thay đổi ngôn ngữ",
-    "changeTheme":"Thay đổi chủ đề"
+    "changeTheme":"Thay đổi chủ đề",
+    "ok":"Đồng ý"
 }
