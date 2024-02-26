@@ -7,7 +7,7 @@ part of 'theme_state.dart';
 // **************************************************************************
 
 abstract class _$ThemeStateCWProxy {
-  ThemeState isLight(bool isLight);
+  ThemeState isDark(bool isDark);
 
   ThemeState status(ThemeStatus status);
 
@@ -18,7 +18,7 @@ abstract class _$ThemeStateCWProxy {
   /// ThemeState(...).copyWith(id: 12, name: "My name")
   /// ````
   ThemeState call({
-    bool? isLight,
+    bool? isDark,
     ThemeStatus? status,
   });
 }
@@ -30,7 +30,7 @@ class _$ThemeStateCWProxyImpl implements _$ThemeStateCWProxy {
   final ThemeState _value;
 
   @override
-  ThemeState isLight(bool isLight) => this(isLight: isLight);
+  ThemeState isDark(bool isDark) => this(isDark: isDark);
 
   @override
   ThemeState status(ThemeStatus status) => this(status: status);
@@ -44,14 +44,14 @@ class _$ThemeStateCWProxyImpl implements _$ThemeStateCWProxy {
   /// ThemeState(...).copyWith(id: 12, name: "My name")
   /// ````
   ThemeState call({
-    Object? isLight = const $CopyWithPlaceholder(),
+    Object? isDark = const $CopyWithPlaceholder(),
     Object? status = const $CopyWithPlaceholder(),
   }) {
     return ThemeState(
-      isLight: isLight == const $CopyWithPlaceholder() || isLight == null
-          ? _value.isLight
+      isDark: isDark == const $CopyWithPlaceholder() || isDark == null
+          ? _value.isDark
           // ignore: cast_nullable_to_non_nullable
-          : isLight as bool,
+          : isDark as bool,
       status: status == const $CopyWithPlaceholder() || status == null
           ? _value.status
           // ignore: cast_nullable_to_non_nullable

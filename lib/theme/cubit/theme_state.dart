@@ -7,10 +7,10 @@ enum ThemeStatus { init, loading, success, error }
 
 @CopyWith()
 class ThemeState extends Equatable {
-  const ThemeState({this.isLight = true, this.status = ThemeStatus.init});
-  final bool isLight;
+  const ThemeState({this.isDark = false, this.status = ThemeStatus.init});
+  final bool isDark;
   final ThemeStatus status;
 
   @override
-  List<Object> get props => [isLight, status];
+  List<Object> get props => [isDark, status];
 }

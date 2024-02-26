@@ -38,11 +38,12 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late LocaleCubit localeCubit;
-  late ThemeCubit themeCubit;
+  late ThemeCubit themeCubitRead;
   @override
   void initState() {
+    themeCubitRead = context.read<ThemeCubit>();
     localeCubit = context.read<LocaleCubit>();
-    themeCubit = context.read<ThemeCubit>();
+    themeCubitRead.initTheme();
     localeCubit.initLanguage();
     // TODO: implement initState
     super.initState();
@@ -50,6 +51,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeCubit themeCubit = context.watch<ThemeCubit>();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -57,7 +59,7 @@ class _MyAppState extends State<MyApp> {
       locale: Locale(localeCubit.state.languageCode.isEmpty
           ? 'en'
           : localeCubit.state.languageCode),
-      theme: themeCubit.state.isLight ? light : dark,
+      theme: themeCubit.state.isDark ? dark : light,
       home: const SplashScreen(),
     );
   }
