@@ -14,7 +14,8 @@ class LocaleCubit extends Cubit<LocaleState> {
     emit(state.copyWith(
         languageCode: code,
         languageCodes: codes,
-        countryNames: countryNames,
+        countryNames: newCountryNames,
+        pathCountryFlag: newPathCountryFlag,
         status: LocaleStatus.success));
   }
 

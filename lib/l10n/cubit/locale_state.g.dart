@@ -15,6 +15,8 @@ abstract class _$LocaleStateCWProxy {
 
   LocaleState isSelectLanguage(bool isSelectLanguage);
 
+  LocaleState pathCountryFlag(List<String> pathCountryFlag);
+
   LocaleState status(LocaleStatus status);
 
   /// This function **does support** nullification of nullable fields. All `null` values passed to `non-nullable` fields will be ignored. You can also use `LocaleState(...).copyWith.fieldName(...)` to override fields one at a time with nullification support.
@@ -28,6 +30,7 @@ abstract class _$LocaleStateCWProxy {
     String? languageCode,
     List<String>? countryNames,
     bool? isSelectLanguage,
+    List<String>? pathCountryFlag,
     LocaleStatus? status,
   });
 }
@@ -55,6 +58,10 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
       this(isSelectLanguage: isSelectLanguage);
 
   @override
+  LocaleState pathCountryFlag(List<String> pathCountryFlag) =>
+      this(pathCountryFlag: pathCountryFlag);
+
+  @override
   LocaleState status(LocaleStatus status) => this(status: status);
 
   @override
@@ -70,6 +77,7 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
     Object? languageCode = const $CopyWithPlaceholder(),
     Object? countryNames = const $CopyWithPlaceholder(),
     Object? isSelectLanguage = const $CopyWithPlaceholder(),
+    Object? pathCountryFlag = const $CopyWithPlaceholder(),
     Object? status = const $CopyWithPlaceholder(),
   }) {
     return LocaleState(
@@ -93,6 +101,11 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
           ? _value.isSelectLanguage
           // ignore: cast_nullable_to_non_nullable
           : isSelectLanguage as bool,
+      pathCountryFlags: pathCountryFlag == const $CopyWithPlaceholder() ||
+              pathCountryFlag == null
+          ? _value.pathCountryFlags
+          // ignore: cast_nullable_to_non_nullable
+          : pathCountryFlag as List<String>,
       status: status == const $CopyWithPlaceholder() || status == null
           ? _value.status
           // ignore: cast_nullable_to_non_nullable

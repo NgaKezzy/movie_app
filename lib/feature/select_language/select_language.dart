@@ -48,6 +48,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                         },
                         isSelected: indexSelect == index,
                         countryName: state.countryNames[index],
+                        pathImage: state.pathCountryFlags[index],
                       );
                     },
                     separatorBuilder: (BuildContext context, int index) {

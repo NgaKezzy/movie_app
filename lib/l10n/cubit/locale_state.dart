@@ -5,11 +5,12 @@ part 'locale_state.g.dart';
 
 enum LocaleStatus { init, start, loading, success, error }
 
-List<String> countryNames = [
+List<String> newCountryNames = [
   'English',
   'Vietnamese',
 ];
 List<String> codes = ['en', 'vi'];
+List<String> newPathCountryFlag = ['england_flag.png', 'vietnam_flag.png'];
 
 @CopyWith()
 class LocaleState extends Equatable {
@@ -18,11 +19,13 @@ class LocaleState extends Equatable {
       this.languageCode = '',
       this.countryNames = const [],
       this.isSelectLanguage = false,
+      this.pathCountryFlags = const [],
       this.status = LocaleStatus.init});
   final List<String> languageCodes;
   final String languageCode;
   final List<String> countryNames;
   final bool isSelectLanguage;
+  final List<String> pathCountryFlags;
   final LocaleStatus status;
 
   @override
@@ -31,6 +34,7 @@ class LocaleState extends Equatable {
         languageCode,
         countryNames,
         isSelectLanguage,
+        pathCountryFlags,
         status,
       ];
 }

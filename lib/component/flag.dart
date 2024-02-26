@@ -42,7 +42,7 @@ class FlagAndCountryName extends StatelessWidget {
                     border: Border.all(
                         style: BorderStyle.solid,
                         color: theme.colorScheme.tertiary)),
-                child: Image.asset('assets/images/england_flag.png')),
+                child: Image.asset('assets/images/$pathImage')),
             Text(
               countryName,
               style: TextStyle(
