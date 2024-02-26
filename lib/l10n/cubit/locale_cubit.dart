@@ -15,7 +15,7 @@ class LocaleCubit extends Cubit<LocaleState> {
         languageCode: code,
         languageCodes: codes,
         countryNames: newCountryNames,
-        pathCountryFlag: newPathCountryFlag,
+        pathCountryFlags: newPathCountryFlag,
         status: LocaleStatus.success));
   }
 

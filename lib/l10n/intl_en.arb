@@ -6,8 +6,9 @@
     "ok": "Ok",
     "download": "Download",
     "explore": "Explore",
-    "me": "Me"
-
+    "me": "Me",
+    "noNetworkConnection":"No network connection!",
+    "networkConnectionRestored":"Network connection restored!"
 
 
 

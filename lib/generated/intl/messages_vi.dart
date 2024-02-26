@@ -31,6 +31,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Xin chào thế giới!"),
         "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
         "me": MessageLookupByLibrary.simpleMessage("Của tôi"),
+        "networkConnectionRestored":
+            MessageLookupByLibrary.simpleMessage("Đã khôi phục kết nối mạng!"),
+        "noNetworkConnection":
+            MessageLookupByLibrary.simpleMessage("Không có kết nối mạng!"),
         "ok": MessageLookupByLibrary.simpleMessage("Đồng ý")
       };
 }

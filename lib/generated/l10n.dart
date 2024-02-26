@@ -129,6 +129,26 @@ class S {
       args: [],
     );
   }
+
+  /// `No network connection!`
+  String get noNetworkConnection {
+    return Intl.message(
+      'No network connection!',
+      name: 'noNetworkConnection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network connection restored!`
+  String get networkConnectionRestored {
+    return Intl.message(
+      'Network connection restored!',
+      name: 'networkConnectionRestored',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

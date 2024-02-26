@@ -34,11 +34,10 @@ class _MyHomeAppState extends State<MyHomeApp> {
         type: BottomNavigationBarType.fixed,
         currentIndex: pageIndex,
         unselectedIconTheme: IconThemeData(color: theme.colorScheme.tertiary),
-        // selectedIconTheme: const IconThemeData(color: Colors.green),
-        // selectedItemColor: Colors.green,
         showUnselectedLabels: true,
         showSelectedLabels: true,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: theme.colorScheme.tertiary,
+        selectedItemColor: theme.colorScheme.onPrimary,
         onTap: (value) {
           setState(() {
             pageIndex = value;
@@ -52,7 +51,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
             label: AppLocalizations.of(context)?.home,
             activeIcon: SvgPicture.asset(
               'assets/icons/home.svg',
-              color: theme.colorScheme.primary,
+              color: theme.colorScheme.onPrimary,
             ),
           ),
           BottomNavigationBarItem(
@@ -60,7 +59,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
             label: AppLocalizations.of(context)?.explore,
             activeIcon: SvgPicture.asset(
               'assets/icons/package.svg',
-              color: theme.colorScheme.primary,
+              color: theme.colorScheme.onPrimary,
             ),
           ),
           BottomNavigationBarItem(
@@ -68,7 +67,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
             label: AppLocalizations.of(context)?.download,
             activeIcon: SvgPicture.asset(
               'assets/icons/download.svg',
-              color: theme.colorScheme.primary,
+              color: theme.colorScheme.onPrimary,
             ),
           ),
           BottomNavigationBarItem(
@@ -76,7 +75,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
             label: AppLocalizations.of(context)?.me,
             activeIcon: SvgPicture.asset(
               'assets/icons/user.svg',
-              color: theme.colorScheme.primary,
+              color: theme.colorScheme.onPrimary,
             ),
           ),
         ],

@@ -30,6 +30,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "helloWorld": MessageLookupByLibrary.simpleMessage("Hello world!"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "me": MessageLookupByLibrary.simpleMessage("Me"),
+        "networkConnectionRestored": MessageLookupByLibrary.simpleMessage(
+            "Network connection restored!"),
+        "noNetworkConnection":
+            MessageLookupByLibrary.simpleMessage("No network connection!"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok")
       };
 }

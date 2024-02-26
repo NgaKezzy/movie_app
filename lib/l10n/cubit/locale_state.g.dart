@@ -15,7 +15,7 @@ abstract class _$LocaleStateCWProxy {
 
   LocaleState isSelectLanguage(bool isSelectLanguage);
 
-  LocaleState pathCountryFlag(List<String> pathCountryFlag);
+  LocaleState pathCountryFlags(List<String> pathCountryFlags);
 
   LocaleState status(LocaleStatus status);
 
@@ -30,7 +30,7 @@ abstract class _$LocaleStateCWProxy {
     String? languageCode,
     List<String>? countryNames,
     bool? isSelectLanguage,
-    List<String>? pathCountryFlag,
+    List<String>? pathCountryFlags,
     LocaleStatus? status,
   });
 }
@@ -58,8 +58,8 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
       this(isSelectLanguage: isSelectLanguage);
 
   @override
-  LocaleState pathCountryFlag(List<String> pathCountryFlag) =>
-      this(pathCountryFlag: pathCountryFlag);
+  LocaleState pathCountryFlags(List<String> pathCountryFlags) =>
+      this(pathCountryFlags: pathCountryFlags);
 
   @override
   LocaleState status(LocaleStatus status) => this(status: status);
@@ -77,7 +77,7 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
     Object? languageCode = const $CopyWithPlaceholder(),
     Object? countryNames = const $CopyWithPlaceholder(),
     Object? isSelectLanguage = const $CopyWithPlaceholder(),
-    Object? pathCountryFlag = const $CopyWithPlaceholder(),
+    Object? pathCountryFlags = const $CopyWithPlaceholder(),
     Object? status = const $CopyWithPlaceholder(),
   }) {
     return LocaleState(
@@ -101,11 +101,11 @@ class _$LocaleStateCWProxyImpl implements _$LocaleStateCWProxy {
           ? _value.isSelectLanguage
           // ignore: cast_nullable_to_non_nullable
           : isSelectLanguage as bool,
-      pathCountryFlags: pathCountryFlag == const $CopyWithPlaceholder() ||
-              pathCountryFlag == null
+      pathCountryFlags: pathCountryFlags == const $CopyWithPlaceholder() ||
+              pathCountryFlags == null
           ? _value.pathCountryFlags
           // ignore: cast_nullable_to_non_nullable
-          : pathCountryFlag as List<String>,
+          : pathCountryFlags as List<String>,
       status: status == const $CopyWithPlaceholder() || status == null
           ? _value.status
           // ignore: cast_nullable_to_non_nullable

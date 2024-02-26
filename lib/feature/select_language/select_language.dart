@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:movie_app/component/button.dart';
 import 'package:movie_app/component/flag.dart';
-import 'package:movie_app/config/app_size.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:movie_app/config/print_color.dart';
 import 'package:movie_app/l10n/cubit/locale_cubit.dart';

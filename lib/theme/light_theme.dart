@@ -6,8 +6,8 @@ ThemeData light = ThemeData(
     colorScheme: const ColorScheme(
       brightness: Brightness.light,
       // 4 màu chủ đạo tạo điểm nhấn
-      primary: Color(0xFFEE4266),
-      onPrimary: Color(0xFF96B6C5),
+      primary: Color(0xFF96B6C5),
+      onPrimary: Color(0xFFEE4266),
       primaryContainer: Color(0xFFB784B7),
       onPrimaryContainer: Color(0xFFADC4CE),
       secondary: Color(0xFFE493B3),
@@ -27,7 +27,7 @@ ThemeData light = ThemeData(
       onErrorContainer: Color(0xFF410E0B),
       background: Color(0xFF96B6C5),
       onBackground: Color(0xFF1C1B1F),
-      surface: Color(0xFFFFFBFE),
+      surface: Color(0xFF00FF00),
       onSurface: Color(0xFF1C1B1F),
       surfaceVariant: Color(0xFFE7E0EC),
       onSurfaceVariant: Color(0xFF49454F),

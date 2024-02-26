@@ -6,5 +6,9 @@
     "ok":"Đồng ý",
     "download": "Tải về",
     "explore": "Khám phá",
-    "me": "Của tôi"
+    "me": "Của tôi",
+    "noNetworkConnection":"Không có kết nối mạng!",
+    "networkConnectionRestored":"Đã khôi phục kết nối mạng!"
+
+
 }
