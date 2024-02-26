@@ -1,9 +1,13 @@
 {
     "helloWorld": "Hello world!",
-    "homePage": "Home page",
+    "home": "Home",
     "changeLanguage": "Change language",
     "changeTheme":"Change theme",
-    "ok": "Ok"
+    "ok": "Ok",
+    "download": "Download",
+    "explore": "Explore",
+    "me": "Me"
+
 
 
 

@@ -25,8 +25,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeLanguage":
             MessageLookupByLibrary.simpleMessage("Change language"),
         "changeTheme": MessageLookupByLibrary.simpleMessage("Change theme"),
+        "download": MessageLookupByLibrary.simpleMessage("Download"),
+        "explore": MessageLookupByLibrary.simpleMessage("Explore"),
         "helloWorld": MessageLookupByLibrary.simpleMessage("Hello world!"),
-        "homePage": MessageLookupByLibrary.simpleMessage("Home page"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "me": MessageLookupByLibrary.simpleMessage("Me"),
         "ok": MessageLookupByLibrary.simpleMessage("Ok")
       };
 }

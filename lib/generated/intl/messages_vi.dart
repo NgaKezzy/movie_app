@@ -25,9 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeLanguage":
             MessageLookupByLibrary.simpleMessage("Thay đổi ngôn ngữ"),
         "changeTheme": MessageLookupByLibrary.simpleMessage("Thay đổi chủ đề"),
+        "download": MessageLookupByLibrary.simpleMessage("Tải về"),
+        "explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
         "helloWorld":
             MessageLookupByLibrary.simpleMessage("Xin chào thế giới!"),
-        "homePage": MessageLookupByLibrary.simpleMessage("Trang chủ"),
+        "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
+        "me": MessageLookupByLibrary.simpleMessage("Của tôi"),
         "ok": MessageLookupByLibrary.simpleMessage("Đồng ý")
       };
 }

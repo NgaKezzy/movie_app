@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:movie_app/feature/splash/splash_screen.dart';
 import 'package:movie_app/l10n/cubit/locale_cubit.dart';
 import 'package:movie_app/router/router_config.dart';
 import 'package:movie_app/theme/cubit/theme_cubit.dart';
@@ -47,14 +48,14 @@ class _MyAppState extends State<MyApp> {
     final LocaleCubit localeCubit = context.watch<LocaleCubit>();
     final ThemeCubit themeCubit = context.watch<ThemeCubit>();
 
-    return MaterialApp.router(
+    return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(localeCubit.state.languageCode.isEmpty
           ? 'en'
           : localeCubit.state.languageCode),
       theme: themeCubit.state.isLight ? light : dark,
-      routerConfig: routerConfig,
+      home: SplashScreen(),
     );
   }
 }

@@ -60,11 +60,11 @@ class S {
     );
   }
 
-  /// `Home page`
-  String get homePage {
+  /// `Home`
+  String get home {
     return Intl.message(
-      'Home page',
-      name: 'homePage',
+      'Home',
+      name: 'home',
       desc: '',
       args: [],
     );
@@ -95,6 +95,36 @@ class S {
     return Intl.message(
       'Ok',
       name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download`
+  String get download {
+    return Intl.message(
+      'Download',
+      name: 'download',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore`
+  String get explore {
+    return Intl.message(
+      'Explore',
+      name: 'explore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Me`
+  String get me {
+    return Intl.message(
+      'Me',
+      name: 'me',
       desc: '',
       args: [],
     );

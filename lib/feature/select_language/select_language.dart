@@ -8,6 +8,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:movie_app/config/print_color.dart';
 import 'package:movie_app/l10n/cubit/locale_cubit.dart';
 import 'package:movie_app/l10n/cubit/locale_state.dart';
+import 'package:movie_app/my_home_app.dart';
 
 class SelectLanguage extends StatefulWidget {
   const SelectLanguage({super.key});
@@ -64,7 +65,14 @@ class _SelectLanguageState extends State<SelectLanguage> {
             Button(
               onTap: () {
                 localeCubit.successSetLanguage();
-                context.go('/selectLanguage/home');
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const MyHomeApp();
+                    },
+                  ),
+                );
               },
               text: AppLocalizations.of(context)!.ok,
               colorBt: theme.colorScheme.primary,

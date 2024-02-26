@@ -1,7 +1,10 @@
 {
     "helloWorld": "Xin chào thế giới!",
-    "homePage": "Trang chủ",
+    "home": "Trang chủ",
     "changeLanguage":"Thay đổi ngôn ngữ",
     "changeTheme":"Thay đổi chủ đề",
-    "ok":"Đồng ý"
+    "ok":"Đồng ý",
+    "download": "Tải về",
+    "explore": "Khám phá",
+    "me": "Của tôi"
 }

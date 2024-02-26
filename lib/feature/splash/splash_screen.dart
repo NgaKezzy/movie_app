@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movie_app/config/app_size.dart';
+import 'package:movie_app/feature/select_language/select_language.dart';
 import 'package:movie_app/l10n/cubit/locale_cubit.dart';
+import 'package:movie_app/my_home_app.dart';
 import 'package:shimmer/shimmer.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -21,9 +23,13 @@ class _SplashScreenState extends State<SplashScreen> {
     localeCubit = context.read<LocaleCubit>();
     localeCubit.checkIsSelectedLanguage();
     Timer(const Duration(seconds: 3), () {
-      context.go(localeCubit.state.isSelectLanguage
-          ? '/selectLanguage/home'
-          : '/selectLanguage');
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => localeCubit.state.isSelectLanguage
+                ? const MyHomeApp()
+                : const SelectLanguage(),
+          ));
     });
     super.initState();
   }
