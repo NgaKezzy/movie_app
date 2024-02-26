@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Network connection restored!"),
         "noNetworkConnection":
             MessageLookupByLibrary.simpleMessage("No network connection!"),
-        "ok": MessageLookupByLibrary.simpleMessage("Ok")
+        "ok": MessageLookupByLibrary.simpleMessage("Ok"),
+        "setting": MessageLookupByLibrary.simpleMessage("Setting")
       };
 }

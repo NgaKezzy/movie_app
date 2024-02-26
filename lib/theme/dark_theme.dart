@@ -6,8 +6,8 @@ ThemeData dark = ThemeData(
     colorScheme: const ColorScheme(
       brightness: Brightness.dark,
       // 4 màu chủ đạo
-      primary: Color(0xFFEE4266),
-      onPrimary: Color(0xFF092635),
+      primary: Color(0xFF070F2B),
+      onPrimary: Color(0xFFEE4266),
       primaryContainer: Color(0xFFB784B7),
       onPrimaryContainer: Color(0xFF1B4242),
       secondary: Color(0xFFE493B3),

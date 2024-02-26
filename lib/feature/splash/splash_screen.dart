@@ -41,13 +41,13 @@ class _SplashScreenState extends State<SplashScreen> {
                       },
                     )
                   },
-                Future.delayed(const Duration(seconds: 5), () {
+                Future.delayed(const Duration(seconds: 3), () {
                   checkStatusNetwork();
                 }),
               }
             else
               {
-                Timer(const Duration(seconds: 3), () {
+                Timer(const Duration(seconds: 2), () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(

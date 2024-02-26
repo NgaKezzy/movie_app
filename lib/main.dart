@@ -38,9 +38,11 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late LocaleCubit localeCubit;
+  late ThemeCubit themeCubit;
   @override
   void initState() {
     localeCubit = context.read<LocaleCubit>();
+    themeCubit = context.read<ThemeCubit>();
     localeCubit.initLanguage();
     // TODO: implement initState
     super.initState();
@@ -48,9 +50,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    final LocaleCubit localeCubit = context.watch<LocaleCubit>();
-    final ThemeCubit themeCubit = context.watch<ThemeCubit>();
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,

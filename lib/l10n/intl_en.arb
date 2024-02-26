@@ -8,7 +8,9 @@
     "explore": "Explore",
     "me": "Me",
     "noNetworkConnection":"No network connection!",
-    "networkConnectionRestored":"Network connection restored!"
+    "networkConnectionRestored":"Network connection restored!",
+    "setting":"Setting"
+
 
 
 

@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Đã khôi phục kết nối mạng!"),
         "noNetworkConnection":
             MessageLookupByLibrary.simpleMessage("Không có kết nối mạng!"),
-        "ok": MessageLookupByLibrary.simpleMessage("Đồng ý")
+        "ok": MessageLookupByLibrary.simpleMessage("Đồng ý"),
+        "setting": MessageLookupByLibrary.simpleMessage("Cài đặt")
       };
 }
