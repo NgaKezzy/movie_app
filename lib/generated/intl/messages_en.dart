@@ -25,10 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeLanguage":
             MessageLookupByLibrary.simpleMessage("Change language"),
         "changeTheme": MessageLookupByLibrary.simpleMessage("Change theme"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark mode"),
         "download": MessageLookupByLibrary.simpleMessage("Download"),
         "explore": MessageLookupByLibrary.simpleMessage("Explore"),
         "helloWorld": MessageLookupByLibrary.simpleMessage("Hello world!"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "me": MessageLookupByLibrary.simpleMessage("Me"),
         "networkConnectionRestored": MessageLookupByLibrary.simpleMessage(
             "Network connection restored!"),

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movie_app/component/header_app.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:movie_app/component/item_setting.dart';
+import 'package:movie_app/feature/select_language/select_language.dart';
 import 'package:movie_app/theme/cubit/theme_cubit.dart';
-import 'package:movie_app/theme/cubit/theme_state.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
@@ -19,14 +20,14 @@ class SettingPage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             height: 60,
             width: width,
             // color: Colors.red,\
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Dark mode'),
+                Text(AppLocalizations.of(context)!.darkMode),
                 Switch(
                   // This bool value toggles the switch.
                   value: themeCubit.state.isDark,
@@ -37,6 +38,16 @@ class SettingPage extends StatelessWidget {
                 )
               ],
             ),
+          ),
+          ItemSetting(
+            text: AppLocalizations.of(context)!.language,
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SelectLanguage(),
+                  ));
+            },
           )
         ],
       ),

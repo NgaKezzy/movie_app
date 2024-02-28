@@ -9,7 +9,9 @@
     "me": "Của tôi",
     "noNetworkConnection":"Không có kết nối mạng!",
     "networkConnectionRestored":"Đã khôi phục kết nối mạng!",
-    "setting":"Cài đặt"
+    "setting":"Cài đặt",
+    "darkMode": "Chế độ ban đêm",
+    "language": "Ngôn ngữ"
 
 
 }

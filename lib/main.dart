@@ -52,13 +52,14 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     final ThemeCubit themeCubit = context.watch<ThemeCubit>();
+    final LocaleCubit localeCubitWatch = context.watch<LocaleCubit>();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(localeCubit.state.languageCode.isEmpty
           ? 'en'
-          : localeCubit.state.languageCode),
+          : localeCubitWatch.state.languageCode),
       theme: themeCubit.state.isDark ? dark : light,
       home: const SplashScreen(),
     );

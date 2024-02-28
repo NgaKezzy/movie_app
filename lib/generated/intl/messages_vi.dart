@@ -25,11 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeLanguage":
             MessageLookupByLibrary.simpleMessage("Thay đổi ngôn ngữ"),
         "changeTheme": MessageLookupByLibrary.simpleMessage("Thay đổi chủ đề"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Chế độ ban đêm"),
         "download": MessageLookupByLibrary.simpleMessage("Tải về"),
         "explore": MessageLookupByLibrary.simpleMessage("Khám phá"),
         "helloWorld":
             MessageLookupByLibrary.simpleMessage("Xin chào thế giới!"),
         "home": MessageLookupByLibrary.simpleMessage("Trang chủ"),
+        "language": MessageLookupByLibrary.simpleMessage("Ngôn ngữ"),
         "me": MessageLookupByLibrary.simpleMessage("Của tôi"),
         "networkConnectionRestored":
             MessageLookupByLibrary.simpleMessage("Đã khôi phục kết nối mạng!"),

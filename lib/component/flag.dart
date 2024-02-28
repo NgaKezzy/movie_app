@@ -27,7 +27,8 @@ class FlagAndCountryName extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
-            color: isSelected ? theme.colorScheme.primary : Colors.white,
+            color:
+                isSelected ? theme.colorScheme.onSecondary : Colors.transparent,
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
                 style: BorderStyle.solid, color: theme.colorScheme.tertiary)),
@@ -46,9 +47,7 @@ class FlagAndCountryName extends StatelessWidget {
             Text(
               countryName,
               style: TextStyle(
-                  fontSize: AppSize.size20,
-                  color: theme.colorScheme.tertiary,
-                  fontWeight: FontWeight.w500),
+                  fontSize: AppSize.size20, fontWeight: FontWeight.w500),
             )
           ],
         ),

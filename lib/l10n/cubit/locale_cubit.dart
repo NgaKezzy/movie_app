@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:movie_app/config/key_app.dart';
+import 'package:movie_app/config/print_color.dart';
 import 'package:movie_app/l10n/cubit/locale_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,6 +25,7 @@ class LocaleCubit extends Cubit<LocaleState> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString(KeyApp.languageCode, code);
     emit(state.copyWith(languageCode: code));
+    printYellow('Language: ' + '$code');
   }
 
   Future<void> successSetLanguage() async {

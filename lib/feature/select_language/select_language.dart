@@ -16,7 +16,7 @@ class SelectLanguage extends StatefulWidget {
 }
 
 class _SelectLanguageState extends State<SelectLanguage> {
-  int indexSelect = 0;
+  int indexSelect = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -63,14 +63,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
             Button(
               onTap: () {
                 localeCubit.successSetLanguage();
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const MyHomeApp();
-                    },
-                  ),
-                );
+                Navigator.pop(context);
               },
               text: AppLocalizations.of(context)!.ok,
               colorBt: theme.colorScheme.primary,

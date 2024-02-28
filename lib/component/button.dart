@@ -30,7 +30,8 @@ class Button extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-            color: colorBt, borderRadius: BorderRadius.circular(borderRadius)),
+            color: Theme.of(context).colorScheme.tertiaryContainer,
+            borderRadius: BorderRadius.circular(borderRadius)),
         child: Text(
           text,
           style: TextStyle(
