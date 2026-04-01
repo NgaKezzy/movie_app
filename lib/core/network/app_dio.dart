@@ -7,9 +7,10 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 @module
 abstract class AppNetworkModule {
   @singleton
-  static Dio provideDio() {
+  Dio provideDio() {
     Dio dio = Dio(
       BaseOptions(
+        baseUrl: 'https://jsonplaceholder.typicode.com/',
         receiveTimeout: const Duration(seconds: 30),
         headers: {'Content-Type': 'application/json'},
       ),
