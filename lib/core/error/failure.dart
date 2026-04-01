@@ -1,0 +1,14 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'failure.freezed.dart';
+part 'failure.g.dart';
+
+@freezed
+sealed class Failure with _$Failure {
+  const factory Failure({
+    @Default(false) bool? error,
+    @Default('') String? message,
+  }) = _Failure;
+
+  factory Failure.fromJson(Map<String, dynamic> json) =>
+      _$FailureFromJson(json);
+}
